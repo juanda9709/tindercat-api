@@ -14,7 +14,7 @@ const loginService = async (email, password) => {
         catId: cat.id,
         name: cat.name
       }
-      const token = jwt.sign(payload, SECRET)
+      const token = jwt.sign(payload, SECRET, { expiresIn: '1h'})
       
       return { status: 1, token: token }
     } else {
@@ -23,9 +23,7 @@ const loginService = async (email, password) => {
   } catch(err) {
       return { status: 2 }
 
-  }
-   
-    
+  }  
     
   }
   
