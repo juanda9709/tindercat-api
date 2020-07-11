@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const { SECRET } = require('../config/constants')
 
 const verifyAuth = (req, res, next) => {
-    console.log('headers', req.headers)
+   // console.log('headers', req.headers)
     if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
         const token = req.headers.authorization.split(' ')[1]
        

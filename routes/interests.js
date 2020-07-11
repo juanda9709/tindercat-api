@@ -6,3 +6,4 @@ router.post('/', add)
 router.get('/', authMiddle, getAll)
 
 module.exports = router
+
